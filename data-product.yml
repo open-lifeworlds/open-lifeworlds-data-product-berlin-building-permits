@@ -1,10 +1,17 @@
 ---
 id: berlin-lor-building-permits
-name: Berlin LOR building permits
+name: Berlin LOR Building Permits
 metadata:
-  - ownership:
+  - ownership: Open Lifeworlds
+  - domain: geodata
   - schema:
-description:
+      - buildings: number of buildings
+      - volume: buildings volume in 1000qm
+      - usage_area: buildings usage are in 100sqm
+      - apartments: number of apartments
+      - apartments_usage_area: apartments usage area in 100sqm
+      - estimated_costs: estimated costs
+description: This data products provides Berlin building permit data on different LOR hierarchy levels
 input_ports:
   - id: berlin-lor-geodata
     metadata:
@@ -174,12 +181,54 @@ input_ports:
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits-source-aligned/main/data/berlin-building-permits-2023-12/berlin-building-permits-2023-12-10-permits-by-district-new-non-residential-buildings.csv
 
 output_ports:
+  - id: berlin-lor-building-permits-geojson
+    metadata:
+      name: Berlin LOR building permits geojson
+      author: Open Lifeworlds
+      url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/tree/main/data
+      license: CC-BY-4.0
+      updated: 2024-04-19
+    files:
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-01/berlin-lor-building-permits-2022-01-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-02/berlin-lor-building-permits-2022-02-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-03/berlin-lor-building-permits-2022-03-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-04/berlin-lor-building-permits-2022-04-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-05/berlin-lor-building-permits-2022-05-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-06/berlin-lor-building-permits-2022-06-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-07/berlin-lor-building-permits-2022-07-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-08/berlin-lor-building-permits-2022-08-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-09/berlin-lor-building-permits-2022-09-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-10/berlin-lor-building-permits-2022-10-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-11/berlin-lor-building-permits-2022-11-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2022-12/berlin-lor-building-permits-2022-12-districts.geojson
+
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-01/berlin-lor-building-permits-2023-01-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-02/berlin-lor-building-permits-2023-02-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-03/berlin-lor-building-permits-2023-03-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-04/berlin-lor-building-permits-2023-04-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-05/berlin-lor-building-permits-2023-05-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-06/berlin-lor-building-permits-2023-06-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-07/berlin-lor-building-permits-2023-07-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-08/berlin-lor-building-permits-2023-08-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-09/berlin-lor-building-permits-2023-09-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-10/berlin-lor-building-permits-2023-10-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-11/berlin-lor-building-permits-2023-11-districts.geojson
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/main/data/berlin-lor-building-permits-2023-12/berlin-lor-building-permits-2023-12-districts.geojson      
+  - id: berlin-lor-building-permits-statistics
+    metadata:
+      name: Berlin LOR building permits statistics
+      author: Open Lifeworlds
+      url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-building-permits/tree/main/data
+      license: CC-BY-4.0
+      updated: 2024-04-19
+    files:
 metrics:
   - quality:
+      - completeness
   - operational:
 classification:
 tags:
   - berlin
   - lor
-  - housing
   - building
+  - housing

@@ -1,0 +1,464 @@
+---
+attribute_groups:
+  6: &6
+    - name: measures
+    - name: usage_area
+    - name: apartments
+    - name: living_area
+    - { name: estimated_costs_per_sqkm, numerator: estimated_costs, denominator_area_sqkm: True }
+    - { name: measures_per_sqkm, numerator: measures, denominator_area_sqkm: True }
+    - { name: usage_area_per_sqkm, numerator: usage_area, denominator_area_sqkm: True }
+    - { name: apartments_per_sqkm, numerator: apartments, denominator_area_sqkm: True }
+    - { name: living_area_per_sqkm, numerator: living_area, denominator_area_sqkm: True }
+    - { name: estimated_costs_per_sqkm, numerator: estimated_costs, denominator_area_sqkm: True }
+  7: &7
+    - name: measures
+    - name: usage_area
+    - name: apartments
+    - name: living_area
+    - name: estimated_costs
+    - { name: measures_per_sqkm, numerator: measures, denominator_area_sqkm: True }
+    - { name: usage_area_per_sqkm, numerator: usage_area, denominator_area_sqkm: True }
+    - { name: apartments_per_sqkm, numerator: apartments, denominator_area_sqkm: True }
+    - { name: living_area_per_sqkm, numerator: living_area, denominator_area_sqkm: True }
+    - { name: estimated_costs_per_sqkm, numerator: estimated_costs, denominator_area_sqkm: True }
+  8: &8
+    - name: measures
+    - name: volume
+    - name: usage_area
+    - name: apartments
+    - name: living_area
+    - name: estimated_costs
+    - { name: measures_per_sqkm, numerator: measures, denominator_area_sqkm: True }
+    - { name: volume_per_sqkm, numerator: volume, denominator_area_sqkm: True }
+    - { name: usage_area_per_sqkm, numerator: usage_area, denominator_area_sqkm: True }
+    - { name: apartments_per_sqkm, numerator: apartments, denominator_area_sqkm: True }
+    - { name: living_area_per_sqkm, numerator: living_area, denominator_area_sqkm: True }
+    - { name: estimated_costs_per_sqkm, numerator: estimated_costs, denominator_area_sqkm: True }
+  9: &9
+    - name: measures
+    - name: volume
+    - name: usage_area
+    - name: apartments
+    - name: living_area
+    - name: estimated_costs
+    - { name: measures_per_sqkm, numerator: measures, denominator_area_sqkm: True }
+    - { name: volume_per_sqkm, numerator: volume, denominator_area_sqkm: True }
+    - { name: usage_area_per_sqkm, numerator: usage_area, denominator_area_sqkm: True }
+    - { name: apartments_per_sqkm, numerator: apartments, denominator_area_sqkm: True }
+    - { name: living_area_per_sqkm, numerator: living_area, denominator_area_sqkm: True }
+    - { name: estimated_costs_per_sqkm, numerator: estimated_costs, denominator_area_sqkm: True }
+  10: &10
+    - name: measures
+    - name: volume
+    - name: usage_area
+    - name: apartments
+    - name: living_area
+    - { name: measures_per_sqkm, numerator: measures, denominator_area_sqkm: True }
+    - { name: volume_per_sqkm, numerator: volume, denominator_area_sqkm: True }
+    - { name: usage_area_per_sqkm, numerator: usage_area, denominator_area_sqkm: True }
+    - { name: apartments_per_sqkm, numerator: apartments, denominator_area_sqkm: True }
+    - { name: living_area_per_sqkm, numerator: living_area, denominator_area_sqkm: True }
+input_port_groups:
+  - id: berlin-building-permits
+    input_ports:
+      - id: berlin-building-permits-2022-01
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-01-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-01-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-01-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-01-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-01-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-02
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-02-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-02-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-02-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-02-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-02-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-03
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-03-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-03-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-03-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-03-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-03-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-04
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-04-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-04-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-04-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-04-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-04-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-05
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-05-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-05-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-05-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-05-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-05-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-06
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-06-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-06-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-06-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-06-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-06-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-07
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-07-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-07-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-07-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-07-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-07-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-08
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-08-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-08-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-08-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-08-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-08-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-09
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-09-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-09-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-09-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-09-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-09-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-10
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-10-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-10-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-10-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-10-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-10-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-11
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-11-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-11-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-11-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-11-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-11-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2022-12
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2022-12-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2022-12-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2022-12-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2022-12-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2022-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2022-12-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-01
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-01-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-01-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-01-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-01-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-01-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-02
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-02-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-02-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-02-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-02-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-02-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-03
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-03-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-03-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-03-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-03-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-03-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-04
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-04-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-04-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-04-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-04-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-04-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-05
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-05-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-05-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-05-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-05-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-05-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-06
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-06-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-06-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-06-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-06-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-06-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-07
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-07-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-07-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-07-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-07-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-07-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-08
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-08-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-08-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-08-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-08-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-08-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-09
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-09-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-09-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-09-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-09-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-09-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-10
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-10-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-10-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-10-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-10-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-10-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-11
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-11-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-11-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-11-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-11-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-11-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2023-12
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2023-12-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2023-12-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2023-12-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2023-12-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2023-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2023-12-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-01
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-01-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-01-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-01-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-01-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-01-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-02
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-02-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-02-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-02-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-02-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-02-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-03
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-03-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-03-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-03-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-03-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-03-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-04
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-04-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-04-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-04-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-04-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-04-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-05
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-05-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-05-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-05-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-05-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-05-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-06
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-06-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-06-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-06-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-06-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-06-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-07
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-07-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-07-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-07-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-07-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-07-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-08
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-08-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-08-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-08-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-08-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-08-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-09
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-09-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-09-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-09-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-09-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-09-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-10
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-10-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-10-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-10-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-10-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-10-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-11
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-11-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-11-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-11-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-11-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-11-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2024-12
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2024-12-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2024-12-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2024-12-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2024-12-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2024-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2024-12-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2025-01
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2025-01-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2025-01-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2025-01-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2025-01-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2025-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2025-01-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2025-02
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2025-02-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2025-02-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2025-02-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2025-02-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2025-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2025-02-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2025-03
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2025-03-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2025-03-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2025-03-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2025-03-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2025-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2025-03-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }
+      - id: berlin-building-permits-2025-04
+        files:
+          - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+            target_file_name: berlin-building-permits-2025-04-districts.geojson
+            source_files:
+              - { source_file_name: berlin-building-permits-2025-04-6-permits-by-district-including-measures-on-existing-buildings-districts.csv, source_file_prefix: "6_", attributes: *6 }
+              - { source_file_name: berlin-building-permits-2025-04-7-permits-by-district-measures-on-existing-buildings-districts.csv, source_file_prefix: "7_", attributes: *7 }
+              - { source_file_name: berlin-building-permits-2025-04-8-permits-by-district-new-buildings-districts.csv, source_file_prefix: "8_", attributes: *8 }
+              - { source_file_name: berlin-building-permits-2025-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv, source_file_prefix: "9_", attributes: *9 }
+              - { source_file_name: berlin-building-permits-2025-04-10-permits-by-district-new-non-residential-buildings-districts.csv, source_file_prefix: "10_", attributes: *10 }

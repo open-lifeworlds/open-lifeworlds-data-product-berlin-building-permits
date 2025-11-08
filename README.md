@@ -9,7 +9,7 @@
   <h1 align="center">Berlin building permits</h1>
 
   <p align="center">
-    Data product providing Berlin building permits</a>
+    Data product providing Berlin building permits
   </p>
 </p>
 

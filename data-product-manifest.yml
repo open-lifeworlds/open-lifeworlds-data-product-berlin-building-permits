@@ -6,7 +6,7 @@ metadata:
   description: Data products providing Berlin building permit data on different LOR hierarchy levels
   url:
   license:
-  updated: 2025-10-27
+  updated: 2025-10-28
   schema:
     - name: buildings
       description: number of buildings
@@ -32,6 +32,7 @@ input_ports:
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/02-silver/berlin-lor-city/berlin-lor-city.geojson
+    manifest_url:
   - id: berlin-lor-district-regions-from-2021
     metadata:
       name: Berlin Lor District Regions From 2021
@@ -43,6 +44,7 @@ input_ports:
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/02-silver/berlin-lor-district-regions-from-2021/berlin-lor-district-regions-from-2021.geojson
+    manifest_url:
   - id: berlin-lor-district-regions-until-2020
     metadata:
       name: Berlin Lor District Regions Until 2020
@@ -54,6 +56,7 @@ input_ports:
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/02-silver/berlin-lor-district-regions-until-2020/berlin-lor-district-regions-until-2020.geojson
+    manifest_url:
   - id: berlin-lor-districts
     metadata:
       name: Berlin Lor Districts
@@ -65,6 +68,7 @@ input_ports:
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/02-silver/berlin-lor-districts/berlin-lor-districts.geojson
+    manifest_url:
   - id: berlin-lor-forecast-areas-from-2021
     metadata:
       name: Berlin Lor Forecast Areas From 2021
@@ -76,6 +80,7 @@ input_ports:
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/02-silver/berlin-lor-forecast-areas-from-2021/berlin-lor-forecast-areas-from-2021.geojson
+    manifest_url:
   - id: berlin-lor-forecast-areas-until-2020
     metadata:
       name: Berlin Lor Forecast Areas Until 2020
@@ -87,6 +92,7 @@ input_ports:
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/02-silver/berlin-lor-forecast-areas-until-2020/berlin-lor-forecast-areas-until-2020.geojson
+    manifest_url:
   - id: berlin-lor-planning-areas-from-2021
     metadata:
       name: Berlin Lor Planning Areas From 2021
@@ -98,6 +104,7 @@ input_ports:
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/02-silver/berlin-lor-planning-areas-from-2021/berlin-lor-planning-areas-from-2021.geojson
+    manifest_url:
   - id: berlin-lor-planning-areas-until-2020
     metadata:
       name: Berlin Lor Planning Areas Until 2020
@@ -109,6 +116,7 @@ input_ports:
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/02-silver/berlin-lor-planning-areas-until-2020/berlin-lor-planning-areas-until-2020.geojson
+    manifest_url:
   - id: berlin-lor-matches
     metadata:
       name: Berlin Lor Matches
@@ -120,6 +128,7 @@ input_ports:
       schema: []
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-geodata/main/data/03-gold/berlin-lor-matches/berlin-lor-matches.json
+    manifest_url:
   - id: berlin-building-permits-2022-01-csv
     metadata:
       name: Berlin Building Permits 2022 01 Csv
@@ -140,6 +149,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-01-csv/berlin-building-permits-2022-01-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-01-csv/berlin-building-permits-2022-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-01-csv/berlin-building-permits-2022-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-02-csv
     metadata:
       name: Berlin Building Permits 2022 02 Csv
@@ -160,6 +170,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-02-csv/berlin-building-permits-2022-02-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-02-csv/berlin-building-permits-2022-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-02-csv/berlin-building-permits-2022-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-03-csv
     metadata:
       name: Berlin Building Permits 2022 03 Csv
@@ -180,6 +191,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-03-csv/berlin-building-permits-2022-03-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-03-csv/berlin-building-permits-2022-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-03-csv/berlin-building-permits-2022-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-04-csv
     metadata:
       name: Berlin Building Permits 2022 04 Csv
@@ -200,6 +212,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-04-csv/berlin-building-permits-2022-04-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-04-csv/berlin-building-permits-2022-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-04-csv/berlin-building-permits-2022-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-05-csv
     metadata:
       name: Berlin Building Permits 2022 05 Csv
@@ -220,6 +233,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-05-csv/berlin-building-permits-2022-05-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-05-csv/berlin-building-permits-2022-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-05-csv/berlin-building-permits-2022-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-06-csv
     metadata:
       name: Berlin Building Permits 2022 06 Csv
@@ -240,6 +254,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-06-csv/berlin-building-permits-2022-06-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-06-csv/berlin-building-permits-2022-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-06-csv/berlin-building-permits-2022-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-07-csv
     metadata:
       name: Berlin Building Permits 2022 07 Csv
@@ -260,6 +275,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-07-csv/berlin-building-permits-2022-07-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-07-csv/berlin-building-permits-2022-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-07-csv/berlin-building-permits-2022-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-08-csv
     metadata:
       name: Berlin Building Permits 2022 08 Csv
@@ -280,6 +296,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-08-csv/berlin-building-permits-2022-08-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-08-csv/berlin-building-permits-2022-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-08-csv/berlin-building-permits-2022-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-09-csv
     metadata:
       name: Berlin Building Permits 2022 09 Csv
@@ -300,6 +317,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-09-csv/berlin-building-permits-2022-09-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-09-csv/berlin-building-permits-2022-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-09-csv/berlin-building-permits-2022-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-10-csv
     metadata:
       name: Berlin Building Permits 2022 10 Csv
@@ -320,6 +338,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-10-csv/berlin-building-permits-2022-10-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-10-csv/berlin-building-permits-2022-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-10-csv/berlin-building-permits-2022-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-11-csv
     metadata:
       name: Berlin Building Permits 2022 11 Csv
@@ -340,6 +359,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-11-csv/berlin-building-permits-2022-11-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-11-csv/berlin-building-permits-2022-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-11-csv/berlin-building-permits-2022-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2022-12-csv
     metadata:
       name: Berlin Building Permits 2022 12 Csv
@@ -360,6 +380,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-12-csv/berlin-building-permits-2022-12-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-12-csv/berlin-building-permits-2022-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2022-12-csv/berlin-building-permits-2022-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-01-csv
     metadata:
       name: Berlin Building Permits 2023 01 Csv
@@ -380,6 +401,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-01-csv/berlin-building-permits-2023-01-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-01-csv/berlin-building-permits-2023-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-01-csv/berlin-building-permits-2023-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-02-csv
     metadata:
       name: Berlin Building Permits 2023 02 Csv
@@ -400,6 +422,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-02-csv/berlin-building-permits-2023-02-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-02-csv/berlin-building-permits-2023-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-02-csv/berlin-building-permits-2023-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-03-csv
     metadata:
       name: Berlin Building Permits 2023 03 Csv
@@ -420,6 +443,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-03-csv/berlin-building-permits-2023-03-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-03-csv/berlin-building-permits-2023-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-03-csv/berlin-building-permits-2023-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-04-csv
     metadata:
       name: Berlin Building Permits 2023 04 Csv
@@ -440,6 +464,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-04-csv/berlin-building-permits-2023-04-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-04-csv/berlin-building-permits-2023-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-04-csv/berlin-building-permits-2023-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-05-csv
     metadata:
       name: Berlin Building Permits 2023 05 Csv
@@ -460,6 +485,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-05-csv/berlin-building-permits-2023-05-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-05-csv/berlin-building-permits-2023-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-05-csv/berlin-building-permits-2023-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-06-csv
     metadata:
       name: Berlin Building Permits 2023 06 Csv
@@ -480,6 +506,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-06-csv/berlin-building-permits-2023-06-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-06-csv/berlin-building-permits-2023-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-06-csv/berlin-building-permits-2023-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-07-csv
     metadata:
       name: Berlin Building Permits 2023 07 Csv
@@ -500,6 +527,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-07-csv/berlin-building-permits-2023-07-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-07-csv/berlin-building-permits-2023-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-07-csv/berlin-building-permits-2023-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-08-csv
     metadata:
       name: Berlin Building Permits 2023 08 Csv
@@ -520,6 +548,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-08-csv/berlin-building-permits-2023-08-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-08-csv/berlin-building-permits-2023-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-08-csv/berlin-building-permits-2023-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-09-csv
     metadata:
       name: Berlin Building Permits 2023 09 Csv
@@ -540,6 +569,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-09-csv/berlin-building-permits-2023-09-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-09-csv/berlin-building-permits-2023-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-09-csv/berlin-building-permits-2023-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-10-csv
     metadata:
       name: Berlin Building Permits 2023 10 Csv
@@ -560,6 +590,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-10-csv/berlin-building-permits-2023-10-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-10-csv/berlin-building-permits-2023-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-10-csv/berlin-building-permits-2023-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-11-csv
     metadata:
       name: Berlin Building Permits 2023 11 Csv
@@ -580,6 +611,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-11-csv/berlin-building-permits-2023-11-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-11-csv/berlin-building-permits-2023-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-11-csv/berlin-building-permits-2023-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2023-12-csv
     metadata:
       name: Berlin Building Permits 2023 12 Csv
@@ -600,6 +632,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-12-csv/berlin-building-permits-2023-12-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-12-csv/berlin-building-permits-2023-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2023-12-csv/berlin-building-permits-2023-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-01-csv
     metadata:
       name: Berlin Building Permits 2024 01 Csv
@@ -620,6 +653,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-01-csv/berlin-building-permits-2024-01-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-01-csv/berlin-building-permits-2024-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-01-csv/berlin-building-permits-2024-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-02-csv
     metadata:
       name: Berlin Building Permits 2024 02 Csv
@@ -640,6 +674,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-02-csv/berlin-building-permits-2024-02-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-02-csv/berlin-building-permits-2024-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-02-csv/berlin-building-permits-2024-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-03-csv
     metadata:
       name: Berlin Building Permits 2024 03 Csv
@@ -660,6 +695,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-03-csv/berlin-building-permits-2024-03-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-03-csv/berlin-building-permits-2024-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-03-csv/berlin-building-permits-2024-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-04-csv
     metadata:
       name: Berlin Building Permits 2024 04 Csv
@@ -680,6 +716,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-04-csv/berlin-building-permits-2024-04-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-04-csv/berlin-building-permits-2024-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-04-csv/berlin-building-permits-2024-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-05-csv
     metadata:
       name: Berlin Building Permits 2024 05 Csv
@@ -700,6 +737,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-05-csv/berlin-building-permits-2024-05-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-05-csv/berlin-building-permits-2024-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-05-csv/berlin-building-permits-2024-05-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-06-csv
     metadata:
       name: Berlin Building Permits 2024 06 Csv
@@ -720,6 +758,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-06-csv/berlin-building-permits-2024-06-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-06-csv/berlin-building-permits-2024-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-06-csv/berlin-building-permits-2024-06-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-07-csv
     metadata:
       name: Berlin Building Permits 2024 07 Csv
@@ -740,6 +779,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-07-csv/berlin-building-permits-2024-07-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-07-csv/berlin-building-permits-2024-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-07-csv/berlin-building-permits-2024-07-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-08-csv
     metadata:
       name: Berlin Building Permits 2024 08 Csv
@@ -760,6 +800,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-08-csv/berlin-building-permits-2024-08-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-08-csv/berlin-building-permits-2024-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-08-csv/berlin-building-permits-2024-08-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-09-csv
     metadata:
       name: Berlin Building Permits 2024 09 Csv
@@ -780,6 +821,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-09-csv/berlin-building-permits-2024-09-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-09-csv/berlin-building-permits-2024-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-09-csv/berlin-building-permits-2024-09-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-10-csv
     metadata:
       name: Berlin Building Permits 2024 10 Csv
@@ -800,6 +842,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-10-csv/berlin-building-permits-2024-10-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-10-csv/berlin-building-permits-2024-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-10-csv/berlin-building-permits-2024-10-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-11-csv
     metadata:
       name: Berlin Building Permits 2024 11 Csv
@@ -820,6 +863,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-11-csv/berlin-building-permits-2024-11-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-11-csv/berlin-building-permits-2024-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-11-csv/berlin-building-permits-2024-11-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2024-12-csv
     metadata:
       name: Berlin Building Permits 2024 12 Csv
@@ -840,6 +884,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-12-csv/berlin-building-permits-2024-12-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-12-csv/berlin-building-permits-2024-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2024-12-csv/berlin-building-permits-2024-12-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2025-01-csv
     metadata:
       name: Berlin Building Permits 2025 01 Csv
@@ -860,6 +905,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-01-csv/berlin-building-permits-2025-01-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-01-csv/berlin-building-permits-2025-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-01-csv/berlin-building-permits-2025-01-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2025-02-csv
     metadata:
       name: Berlin Building Permits 2025 02 Csv
@@ -880,6 +926,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-02-csv/berlin-building-permits-2025-02-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-02-csv/berlin-building-permits-2025-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-02-csv/berlin-building-permits-2025-02-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2025-03-csv
     metadata:
       name: Berlin Building Permits 2025 03 Csv
@@ -900,6 +947,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-03-csv/berlin-building-permits-2025-03-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-03-csv/berlin-building-permits-2025-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-03-csv/berlin-building-permits-2025-03-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
   - id: berlin-building-permits-2025-04-csv
     metadata:
       name: Berlin Building Permits 2025 04 Csv
@@ -920,6 +968,7 @@ input_ports:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-04-csv/berlin-building-permits-2025-04-8-permits-by-district-new-buildings-districts.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-04-csv/berlin-building-permits-2025-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-city.csv
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-building-permits-source-aligned/main/data/03-gold/berlin-building-permits-2025-04-csv/berlin-building-permits-2025-04-9-permits-by-district-new-buildings-with-1-or-2-apartments-districts.csv
+    manifest_url:
 transformation_steps:
   - name: Data extractor
     path: https://github.com/open-lifeworlds/open-lifeworlds-python-lib/blob/main/openlifeworlds/extract/data_extractor.py
@@ -935,7 +984,7 @@ output_ports:
       description:
       url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/tree/main/data/03-gold/berlin-building-permits-geojson
       license:
-      updated: 2025-10-27
+      updated: 2025-10-28
       schema:
     files:
       - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/refs/heads/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2022-01-districts.geojson
@@ -978,6 +1027,7 @@ output_ports:
       - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/refs/heads/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2025-02-districts.geojson
       - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/refs/heads/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2025-03-districts.geojson
       - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/refs/heads/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2025-04-districts.geojson
+    manifest_url:
   - id: berlin-building-permits-statistics
     metadata:
       name: Berlin Building Permits Statistics
@@ -985,10 +1035,11 @@ output_ports:
       description:
       url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/tree/main/data/03-gold/berlin-building-permits-statistics
       license:
-      updated: 2025-10-27
+      updated: 2025-10-28
       schema:
     files:
       - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/refs/heads/main/data/03-gold/berlin-building-permits-statistics/berlin-building-permits-statistics.json
+    manifest_url:
 observability:
   quality:
     - name: geojson_property_completeness

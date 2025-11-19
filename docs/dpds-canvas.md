@@ -122,6 +122,8 @@
 ### Output Ports
 #### berlin-building-permits-geojson
 * fully qualified name: berlin-building-permits-geojson
+#### berlin-building-permits-statistics
+* fully qualified name: berlin-building-permits-statistics
 
 
 ---

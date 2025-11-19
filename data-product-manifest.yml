@@ -6,7 +6,7 @@ metadata:
   description: Data products providing Berlin building permit data on different LOR hierarchy levels
   url:
   license:
-  updated: 2025-10-29
+  updated: 2025-10-31
   schema:
     - name: buildings
       description: number of buildings
@@ -984,7 +984,7 @@ output_ports:
       description:
       url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/tree/main/data/03-gold/berlin-building-permits-geojson
       license:
-      updated: 2025-10-29
+      updated: 2025-10-31
       schema:
     files:
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2022-01-districts.geojson
@@ -1027,6 +1027,18 @@ output_ports:
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2025-02-districts.geojson
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2025-03-districts.geojson
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2025-04-districts.geojson
+    manifest_url:
+  - id: berlin-building-permits-statistics
+    metadata:
+      name: Berlin Building Permits Statistics
+      owner: Open Lifeworlds
+      description:
+      url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/tree/main/data/03-gold/berlin-building-permits-statistics
+      license:
+      updated: 2025-10-31
+      schema:
+    files:
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/main/data/03-gold/berlin-building-permits-statistics/berlin-building-permits-statistics.json
     manifest_url:
 observability:
   quality:

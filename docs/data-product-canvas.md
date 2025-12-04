@@ -5,7 +5,7 @@
 
 * owner: Open Lifeworlds
 * description: Data products providing Berlin building permit data on different LOR hierarchy levels
-* updated: 2025-11-07
+* updated: 2025-11-09
 
 ## Input Ports
 
@@ -28,7 +28,7 @@
 name: Berlin Building Permits Geojson
 * owner: Open Lifeworlds
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/tree/main/data/03-gold/berlin-building-permits-geojson
-* updated: 2025-11-07
+* updated: 2025-11-09
 
 **Files**
 
@@ -78,7 +78,7 @@ name: Berlin Building Permits Geojson
 name: Berlin Building Permits Statistics
 * owner: Open Lifeworlds
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/tree/main/data/03-gold/berlin-building-permits-statistics
-* updated: 2025-11-07
+* updated: 2025-11-09
 
 **Files**
 

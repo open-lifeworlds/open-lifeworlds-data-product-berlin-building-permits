@@ -7,15 +7,12 @@
 ### Basic Information
 
 * output file formats: geojson, .json
-* categories: timeseries
 * description: Data products providing Berlin building permit data on different LOR hierarchy levels
-* logo URL: https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-population-source-aligned/refs/heads/main/logo-with-text.png
+* logo URL: https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/refs/heads/main/logo-with-text.png
 * product ID: berlin-building-permits
-* product series: Berlin Timeseries Series
 * status: active
 * tags: berlin, building
 * type: source-aligned
-* value proposition: Combining Berlin LOR building permit data and geodata
 * version: 1.0
 * visibility: public
 

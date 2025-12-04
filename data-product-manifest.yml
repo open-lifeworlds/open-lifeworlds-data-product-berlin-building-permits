@@ -6,7 +6,7 @@ metadata:
   description: Data products providing Berlin building permit data on different LOR hierarchy levels
   url:
   license:
-  updated: 2025-11-07
+  updated: 2025-11-09
   schema:
     - name: buildings
       description: number of buildings
@@ -40,7 +40,7 @@ output_ports:
       description:
       url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/tree/main/data/03-gold/berlin-building-permits-geojson
       license:
-      updated: 2025-11-07
+      updated: 2025-11-09
       schema:
     files:
       - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/refs/heads/main/data/03-gold/berlin-building-permits-geojson/berlin-building-permits-2022-01-districts.geojson
@@ -90,7 +90,7 @@ output_ports:
       description:
       url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/tree/main/data/03-gold/berlin-building-permits-statistics
       license:
-      updated: 2025-11-07
+      updated: 2025-11-09
       schema:
     files:
       - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-building-permits/refs/heads/main/data/03-gold/berlin-building-permits-statistics/berlin-building-permits-statistics.json

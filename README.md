@@ -6,7 +6,7 @@
     <img src="logo-with-text.png" alt="Logo" style="height: 80px; ">
   </a>
 
-  <h1 align="center">Berlin building permits</h1>
+  <h1 align="center">Berlin Building Permits</h1>
 
   <p align="center">
     Data product providing Berlin building permits
